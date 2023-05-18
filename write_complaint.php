@@ -31,21 +31,21 @@
 				<div class="form-group row">
 					<label for="inputname" class="col-sm-1 col-form-label">Name</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="inputname" placeholder="Your name" name="name">
+						<input type="text" class="form-control" id="inputname" placeholder="Your name" name="name" required>
 					</div>
 				</div>
 				<br>
 				<div class="form-group row">
 					<label for="inputRoom-no" class="col-sm-1 col-form-label">Room-no</label>
 					<div class="col-sm-10">
-						<input type="number" class="form-control" id="inputroom-no" placeholder="Your room-no" name="roomNo">
+						<input type="number" class="form-control" id="inputroom-no" placeholder="Your room-no" name="roomNo" required>
 					</div>
 				</div>
 				<br>
 				<div class="form-group row">
 					<label for="inputPhone" class="col-sm-1 col-form-label">Phone number</label>
 					<div class="col-sm-10">
-						<input type="number" class="form-control" id="inputnumber" placeholder="phone" name="phone">
+						<input type="number" class="form-control" id="inputnumber" placeholder="phone" name="phone" required>
 					</div>
 				</div>
 				<br>
@@ -53,7 +53,7 @@
 				<div class="form-group">
                     <label for="exampleFormControlTextarea1" class="col-sm-1 col-form-label">Your Query</label>
                      
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Write Down Your Query Here" name="message"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Write Down Your Query Here" name="message"></textarea required>
                 </div>
 
 				<br>

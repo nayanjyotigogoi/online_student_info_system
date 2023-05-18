@@ -42,12 +42,12 @@ $data=mysqli_connect($host,$user,$password,$db);
         if($result){
             
 
-            $message= "Data uploaded succesfully";
-			$_SESSION['loginMessage']=$message;   
+            echo "<script>alert('Data uploaded succesfully');</script>";
+			    
             header("location:edit_student.php");
         }
         else{
-            $_SESSION['message']="couldn't Upload data";
+             echo "<script> alert('couldn't Upload data');</script>";
         }
          
     }

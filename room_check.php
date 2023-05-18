@@ -2,47 +2,48 @@
 
 session_start();
 
-    if(!isset($_SESSION['username']))
-    {
-        header("location:login.php");
-    }
-    elseif($_SESSION['usertype']=='student'){
-        header("location:login.php");
-	}
+if (!isset($_SESSION['username'])) {
+	header("location:login.php");
+} elseif ($_SESSION['usertype'] == 'student') {
+	header("location:login.php");
+}
 
-	$host="localhost";
-	$user="root";
-	$password="";
-	$db="miniproject";
+$host = "localhost";
+$user = "root";
+$password = "";
+$db = "miniproject";
 
-	$data=mysqli_connect($host,$user,$password,$db); //this says that we're connected with the database.
+$data = mysqli_connect($host, $user, $password, $db); //this says that we're connected with the database.
 
 //we will only come to this if condition only if someone click the add student button
-if (isset($_POST['update']))
-{
+if (isset($_POST['update'])) {
 	$roomno = $_POST['room_no'];
-	$password = $_POST['occupant_1'];
-	$email = $_POST['occupant_2'];
-	$phone_number = $_POST['status'];
-	
-	$check = "SELECT *FROM room WHERE room_no = '".$roomno."'"; 
+	$occupant_1 = $_POST['occupant_1'];
+	$occupant_2 = $_POST['occupant_2'];
+	$status = $_POST['status'];
+
+	$check = "SELECT *FROM room WHERE room_no = '" . $roomno . "'";
 	$check_user = mysqli_query($data, $check);
 
-	$row_count = mysqli_num_rows($check_user);  
+	$row_count = mysqli_num_rows($check_user);
+
 	if ($row_count == 1) {
-		echo "Room  already occupied. try another room";
+		echo "<script> alert('Room  already occupied. try another room');</script>";
 	} else {
 
-		$sql = "INSERT INTO room (room_no,occupant_1,occupant_2,status) VALUES ('".$roomno."','".$password."','".$email."','".$phone_number."')";
+		$sql = "INSERT INTO room (room_no,occupant_1,occupant_2,status) VALUES ('" . $roomno . "','" . $occupant_1 . "','" . $occupant_2 . "','" . $status . "')";
 
+		if ($roomno != "" && $occupant_1 != "" && $occupant_2 != "" & $status != "") {
+			$result = mysqli_query($data, $sql);
 
-		$result = mysqli_query($data,$sql);
-
-		if ($result) {
-            $_SESSION['message']="entry completed";
-            header("location:add_room.php");
-		} else {
-            $_SESSION['message']="couldn't register user";
+			if ($result) {
+				$_SESSION['message'] = "entry completed";
+				header("location:add_room.php");
+			} else {
+				$_SESSION['message'] = "couldn't register user";
+			}
+		} else{
+			echo"<script>alert('please fill all the input details');</script>";
 		}
 	}
 }

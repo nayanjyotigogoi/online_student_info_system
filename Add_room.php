@@ -32,28 +32,28 @@
 				<div class="form-group row">
 					<label for="inputUsername" class="col-sm-1 col-form-label">Room-no</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="inputroom_no" placeholder="Room no" name="room_no">
+						<input type="text" class="form-control" id="inputroom_no" placeholder="Room no" name="room_no" required>
 					</div>
 				</div>
 				<br>
 				<div class="form-group row">
 					<label for="inputPassword" class="col-sm-1 col-form-label">occupant A</label>
 					<div class="col-sm-10">
-						<input type="text"   class="form-control" id="inputname" placeholder="Occupant-A name" name="occupant_1">
+						<input type="text"   class="form-control" id="inputname" placeholder="Occupant-A name" name="occupant_1" required>
 					</div>
 				</div>
 				<br>
 				<div class="form-group row">
 					<label for="inputPhone" class="col-sm-1 col-form-label">Occupant-B</label>
 					<div class="col-sm-10">
-						<input type="text"  class="form-control" id="inputname" placeholder="Occupant-B name" name="occupant_2">
+						<input type="text"  class="form-control" id="inputname" placeholder="Occupant-B name" name="occupant_2" required>
 					</div>
 				</div>
 				<br>
 				<div class="form-group row">
 					<label for="Email" class="col-sm-1 col-form-label">Status</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="inputstatus" placeholder="Status" name="status">
+						<input type="text" class="form-control" id="inputstatus" placeholder="Status" name="status" required>
 					</div>
 				</div>
 				<br>

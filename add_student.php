@@ -31,28 +31,28 @@
 				<div class="form-group row">
 					<label for="inputUsername" class="col-sm-1 col-form-label">Username</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="inputUsername" placeholder="username" name="username">
+						<input type="text" class="form-control" id="inputUsername" placeholder="username" name="username" required>
 					</div>
 				</div>
 				<br>
 				<div class="form-group row">
 					<label for="inputPassword" class="col-sm-1 col-form-label">Password</label>
 					<div class="col-sm-10">
-						<input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password">
+						<input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password" required>
 					</div>
 				</div>
 				<br>
 				<div class="form-group row">
 					<label for="inputPhone" class="col-sm-1 col-form-label">Phone number</label>
 					<div class="col-sm-10">
-						<input type="phone" class="form-control" id="inputnumber" placeholder="phone" name="phone">
+						<input type="phone" class="form-control" id="inputnumber" placeholder="phone" name="phone" required>
 					</div>
 				</div>
 				<br>
 				<div class="form-group row">
 					<label for="Email" class="col-sm-1 col-form-label">Email</label>
 					<div class="col-sm-10">
-						<input type="Email" class="form-control" id="inputEmail" placeholder="Email" name="email">
+						<input type="Email" class="form-control" id="inputEmail" placeholder="Email" name="email" required>
 					</div>
 				</div>
 				<br>
