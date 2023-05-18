@@ -1,0 +1,67 @@
+/* this css page is link with all the other pages styling */
+ 
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+h1{
+	font-size: 15px;
+}
+
+.header{
+	background-color: rgb(201, 220, 241);
+	line-height: 70px;
+	padding-left: 30px;	
+	width: "100%";
+}
+
+a,a:hover{
+	text-decoration: none!important;
+}
+
+.logout{
+	float: right;
+	padding-right: 30px;
+}
+
+ul{
+	background-color: #424a5b;
+	width: 16%;
+	position: absolute;
+	left: 0;
+	height: 100vh;
+	/* height: 100vh; */
+	height: 100%;
+	padding-top: 5%;
+	text-align: center;
+}
+
+ul li {
+	list-style: none;
+	padding-bottom: 30px;
+	font-size: 15px;
+}
+
+ul li a {
+	color: white;
+	font-weight: bold;
+}
+
+ul li a:hover{
+	color: skyblue;
+	text-decoration: none;
+}
+
+.content{
+	margin-left: 20%;
+	margin-top: 5%;
+	height: 80vh;
+	overflow-y: scroll;
+}
+
+/* student_profile_sidebar css */
+.student-profile-form-box{
+	width: 60%;
+}
+
