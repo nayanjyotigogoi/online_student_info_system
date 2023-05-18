@@ -29,16 +29,16 @@ if ($_POST['update'])
 	$status = $_POST['status'];
 	
 
-		$sql="UPDATE room room_no='".$roomno."',occupant_1='".$occupant_1."',occupant_2='".$occupant_2."',status='".$status."' WHERE id='".$id."'";
+	$sql="UPDATE room room_no='".$roomno."',occupant_1='".$occupant_1."',occupant_2='".$occupant_2."',status='".$status."' WHERE id='".$id."'";
 
 
-		$result = mysqli_query($data,$sql);
+	$result = mysqli_query($data,$sql);
 
-		if ($result) {
-            $_SESSION['message']="entry completed";
-            header("location:update_room.php");
-		} else {
-            $_SESSION['message']="couldn't register user";
-		}
+	if ($result) {
+        $_SESSION['message']="entry completed";
+        header("location:update_room.php");
+	} else {
+        $_SESSION['message']="couldn't register user";
+	}
 	
 }

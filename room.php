@@ -27,7 +27,7 @@ $result = mysqli_query($data, $sql);
 
 <head>
     <meta charset="utf-8">
-    <title> Rooms </title>
+    <title>Rooms</title>
 
     <link rel="stylesheet" type="text/css" href="admin.css">
 
