@@ -72,7 +72,7 @@ $result = mysqli_query($data, $sql);
                         <td><?php echo "{$info['occupant_1']}";?></td>
                         <td><?php echo "{$info['occupant_2']}";?></td>
                         <td><?php echo "{$info['status']}";?></td>
-                        <td><a href="update_room,php?id=  $info[id] ">Update</a></td>
+                        <td><a href="update_room.php?id=$info[id]">Update</a></td>
                                               
                 </tr>    
                 <?php 

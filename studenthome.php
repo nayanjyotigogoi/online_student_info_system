@@ -51,7 +51,7 @@
 			</li>
 
 			<li>
-				<a href=" ">Upload fess receipt</a>
+				<a href="file_upload.php">Upload fess receipt</a>
 			</li>
 
 
@@ -66,7 +66,11 @@
 
 		<h1>
 
-			 
+			 <?php
+			 session_start();
+
+				echo "welcome ".$_SESSION['enrollment_id'];
+			 ?>
 			 
 		</h1>
 	</div>

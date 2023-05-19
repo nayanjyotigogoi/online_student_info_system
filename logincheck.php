@@ -19,8 +19,6 @@ if ($data === false) {
 if (isset($_POST['login'])) {   //both the username and password is coming from login page
 
 	$name = $_POST['enrollment_id'];
-
-
 	$pass = $_POST['password'];
 
 	//username and the password is coming from the database fetching this line of code check in the database whether the given enrollment id and password is matching or not
@@ -40,8 +38,8 @@ if (isset($_POST['login'])) {   //both the username and password is coming from 
 	if ($row["usertype"] == "student") 
 	{
 
-		$message = "Welcome!";
-		$_SESSION['loginMessage'] = $message;
+		 
+		$_SESSION['enrollment_id'] = $name;
 		header("location:studenthome.php");
 	} else {
 
