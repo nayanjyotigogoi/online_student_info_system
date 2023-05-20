@@ -10,7 +10,7 @@
 <body>
   <nav>
     <header id="header">
-      <h1>Welcome to Our Hostel</h1>
+      <h1>Welcome to Hostel</h1>
       <nav>
         <ul>
           <li><a href="/STUDENT_MANAGEMENT/login.php">Login</a></li>
@@ -41,11 +41,11 @@
         <li>Electric Neutral Hostel</li>
       </ul>
       <hr>
-      <hr>
+       
     </div>
   </div>
   <footer>
-    <p>&copy; 2023 Our Hostel. All rights reserved.</p>
+    <p>&copy; 2023 Hostel. All rights reserved.</p>
   </footer>
 </body>
 </html>

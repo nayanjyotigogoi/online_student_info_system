@@ -31,37 +31,37 @@
 
                   <div class="form-outline mb-4">
                     <label class="form-label" for="form3Example1cg">Enrollment id</label>
-                    <input type="text" id="form3Example1cg" class="form-control form-control-lg" placeholder="your enrollment Id" name="enrollment_id" />
+                    <input type="text" id="form3Example1cg" class="form-control form-control-lg" placeholder="your enrollment Id" name="enrollment_id" required/>
 
                   </div>
 
                   <div class="form-outline mb-4">
                     <label class="form-label" for="form3Example3cg">Your Email</label>
-                    <input type="email" id="form3Example3cg" class="form-control form-control-lg" placeholder="you Email" name="email" />
+                    <input type="email" id="form3Example3cg" class="form-control form-control-lg" placeholder="you Email" name="email" required/>
 
                   </div>
 
                   <div class="form-outline mb-4">
                     <label class="form-label" for="form3Example3cg">Phone number</label>
-                    <input type="" id="form3Example3cg" class="form-control form-control-lg" placeholder="Your contact number" name="phone" />
+                    <input type="" id="form3Example3cg" class="form-control form-control-lg" placeholder="Your contact number" name="phone" required/>
 
                   </div>
 
                   <div class="form-outline mb-4">
                     <label class="form-label" for="form3Example4cg">Password</label>
-                    <input type="password" id="form3Example4cg" class="form-control form-control-lg" name="password" />
+                    <input type="password" id="form3Example4cg" class="form-control form-control-lg" name="password" required/>
 
                   </div>
 
                   <div class="form-outline mb-4">
                     <label class="form-label" for="form3Example4cdg">confirm password</label>
-                    <input type="password" id="form3Example4cdg" class="form-control form-control-lg" name="password" />
+                    <input type="password" id="form3Example4cdg" class="form-control form-control-lg" name="password" required/>
 
                   </div>
 
                   <div class="form-check d-flex justify-content-center mb-5">
                     <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" name="form-check-input me-2" />
-                    <label class="form-check-label" for="form2Example3g">
+                    <label class="form-check-label" for="form2Example3g" required>
                       I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
                     </label>
                   </div>
