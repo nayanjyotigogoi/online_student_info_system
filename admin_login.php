@@ -54,7 +54,7 @@
 									<p class="text-white-50 mb-5">Please enter your login and password!</p>
 
 									<div class="form-outline form-white mb-4">
-										<input type="text" id="typeEmailX" class="form-control form-control-lg" name="username"/>
+										<input type="text" id="typeEmailX" class="form-control form-control-lg" name="username" />
 										<label class="form-label" for="typeEmailX">Username</label>
 									</div>
 
@@ -71,6 +71,9 @@
 										<a href="#!" class="text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
 										<a href="#!" class="text-white"><i class="fab fa-twitter fa-lg mx-4 px-2"></i></a>
 										<a href="#!" class="text-white"><i class="fab fa-google fa-lg"></i></a>
+									</div>
+									<div>
+										<a href="./home.php" class="text-white-50 fw-bold text-body"><u><br>HOME</u></a>
 									</div>
 
 								</div>
@@ -90,7 +93,7 @@
 		</div>
 	</section>
 
-	 
+
 
 </body>
 

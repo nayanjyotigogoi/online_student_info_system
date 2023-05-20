@@ -1,4 +1,3 @@
-<!--  
 <?php
 
  
@@ -17,28 +16,28 @@ if ($data===false){
     //isset()-->checks whether a variable is set, which means that it has to be declared and is not NULL.
     if(isset($_POST['register']))
     {
-        $data_id=$_POST['enrollment_id'];
-        $data_name=$_POST['username'];
-        $data_email=$_POST['email'];
+        
+        
         $data_number=$_POST['phone'];
+        $data_email=$_POST['email'];
+        $data_id=$_POST['enrollment_id'];
         $data_password=$_POST['password'];
         $usertype="student";
 //inserting the student data
-        $sql="INSERT INTO user (enrollment_id,username,password,phone,email,usertype) VALUES ('".$data_id."','".$data_name."','".$data_password."','".$data_number."','".$data_email."','".$usertype."')";
-
+        $sql="INSERT INTO registration (phone,email,enrollment_id,password,usertype) VALUES ('".$data_number."','".$data_email."','".$data_id."','".$data_password."','".$usertype."')";
         $result=mysqli_query($data,$sql); //all the data are inserted.
         
         if($result){
 
-            $message= "user registered succesfully";
-			$_SESSION['loginMessage']=$message;    
+            echo "<script>alert(user registered succesfully);</script>"; 
+            
             header("location:login.php");
         }
         else{
-            $_SESSION['message']="couldn't register user";
+            echo "<script>alert(couldn't register user);</script>";
         }
          
     }
 
      
-?> -->
+?> 

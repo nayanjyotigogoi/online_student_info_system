@@ -68,6 +68,9 @@
 				<a href="Add_room.php">Update Rooms</a>
 			</li>
 
+			<li>
+				<a href="View_receipt.php">View receipt</a>
+			</li>
 
 		</ul>
 

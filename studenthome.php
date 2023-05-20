@@ -43,10 +43,6 @@
 			</li>
 
 			<li>
-				<a href="update_profile.php">Update profile</a>
-			</li>
-
-			<li>
 				<a href="write_complaint.php">Write Complaint</a>
 			</li>
 
