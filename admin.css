@@ -37,6 +37,17 @@ ul{
 	text-align: center;
 }
 
+.point{
+	width: 16%;
+	position: absolute;
+	left: 0;
+	height: 100vh;
+	/* height: 100vh; */
+	height: 100%;
+	padding-top: 5%;
+	text-align: center;
+}
+
 ul li {
 	list-style: none;
 	padding-bottom: 30px;

@@ -45,6 +45,7 @@
     <div class="content">
 
         <h1>Students</h1>
+        <p>View comprehensive details of all admitted students, including their personal information and academic records.</p>
         <center>
             <table class="table">
                 <thead>

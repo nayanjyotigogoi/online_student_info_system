@@ -48,6 +48,7 @@ $result = mysqli_query($data, $sql);
     <div class="content">
 
         <h1>Student data</h1>
+        <p>Access students' login details to assist with any technical issues they may encounter.</p>
 
         <?php
         if ($_SESSION['message']) {

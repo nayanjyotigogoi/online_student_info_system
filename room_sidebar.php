@@ -32,7 +32,7 @@
     <ul>
 
         <li>
-            <a href="room.php">Rooms</a>
+            <a href="room.php">Rooms Details</a>
         </li>
 
     </ul>

@@ -21,6 +21,7 @@
 	<div class="content">
 
 		<h1>Add Student</h1>
+		<p>Manually add students to the system, ensuring accurate and up-to-date records.</p>
 
 		<div>
 			<form action="add_student_check.php" method="post">

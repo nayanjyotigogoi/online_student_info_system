@@ -39,6 +39,9 @@ if ($result) {
 
     <div class="content">
         <h1>User Profile</h1>
+        <br>
+
+ 		<p>You can access and update your personal information, ensuring that your details are accurate and up to date.</p>
 
         <?php if (isset($profileError)) : ?>
             <p><?php echo $profileError; ?></p>

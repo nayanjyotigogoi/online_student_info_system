@@ -34,7 +34,8 @@ $result = mysqli_query($data, $query);
     ?>
 
     <div class="content">
-        <h1>Uploaded Files</h1>
+        <h1>Receipt</h1>
+        <p>Conveniently access and review mess fee receipts uploaded by students, ensuring smooth financial operations.</p>
         <table class="table">
             <thead>
                 <tr>

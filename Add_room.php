@@ -25,7 +25,8 @@
 
 	<div class="content">
 
-		<h1>Update Room details</h1>
+		<h1>Enter room details</h1>
+		<p>Assign rooms to students based on their preferences and availability.</p>
 
 		<div>
 			<form action="room_check.php" method="post">
@@ -46,7 +47,7 @@
 				<div class="form-group row">
 					<label for="inputPhone" class="col-sm-1 col-form-label">Occupant-B</label>
 					<div class="col-sm-10">
-						<input type="text"  class="form-control" id="inputname" placeholder="Occupant-B name" name="occupant_2" required>
+						<input type="text"  class="form-control" id="inputname" placeholder="Occupant-B name" name="occupant_2"  >
 					</div>
 				</div>
 				<br>
@@ -57,7 +58,7 @@
 					</div>
 				</div>
 				<br>
-				<button type="submit" class="btn btn-secondary" name="update">Update</button>
+				<button type="submit" class="btn btn-secondary" name="update">Save</button>
 
 			</form>
 

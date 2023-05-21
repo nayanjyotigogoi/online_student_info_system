@@ -21,6 +21,7 @@ error_reporting(0);
     include "file_upload_sidebar.php"
     ?>
     <div class="content">
+        <h1>Upload your fee receipt here. also Don't forgot to mention the transaction Id.</h1>
         <form action="file_upload_check.php" method="post" enctype="multipart/form-data">
 
             <div>
@@ -77,16 +78,5 @@ error_reporting(0);
 
 <?php
  
-// $filename =$_FILES["img_source"]["name"];
-// $tempname =$_FILES["img_source"]["tmp_name"];
-
-// $folder="receipt_folder/".$filename; 
- 
-// echo $folder;
-
-// move_uploaded_file($tempname, $folder);
-
-// // echo "<img src='$folder' height='100px' width='100px'> ";
-
 ?>
  

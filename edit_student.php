@@ -76,6 +76,10 @@ if ($result) {
 
         <h1>Edit details</h1>
 
+        <br>
+
+        <p>You can update your personal information, HERE.</p>
+
         <?php if (isset($editError)) : ?>
             <p><?php echo $editError; ?></p>
         <?php else : ?>

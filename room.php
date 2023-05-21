@@ -46,6 +46,7 @@ $result = mysqli_query($data, $sql);
     <div class="content">
 
         <h1>Student data</h1>
+        <p>Manage room details, including occupancy, availability, and amenities.</p>
 
         
 

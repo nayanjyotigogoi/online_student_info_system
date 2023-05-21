@@ -45,6 +45,7 @@
     <div class="content">
 
         <h1>complaints</h1>
+        <p>View complaints posted by students, facilitating prompt resolution and improved student satisfaction.</p>
         <center>
             <table class="table">
                 <thead>
