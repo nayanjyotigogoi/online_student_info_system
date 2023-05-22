@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hostel</title>
   <link rel="stylesheet" href="style.css">
-   
+
 </head>
+
 <body>
   <nav>
     <header id="header">
       <h1>Welcome to Hostel</h1>
-      <nav>
-        <ul>
-          <li><a href="/STUDENT_MANAGEMENT/login.php">Login</a></li>
-          <li><a href="/STUDENT_MANAGEMENT/signup.php">Signup</a></li>
-          <li><a href="/STUDENT_MANAGEMENT/admin_login.php">ADMIN</a></li>
-          <li><a href="./contact.php">Contact us</a></li>
-        </ul>
-      </nav>
+
     </header>
+
+
+
   </nav>
 
+  <nav>
+    <header id="header">
+      <ul>
+        <li><a href="/STUDENT_MANAGEMENT/login.php">Login</a></li>
+        <li><a href="/STUDENT_MANAGEMENT/signup.php">Signup</a></li>
+        <li><a href="/STUDENT_MANAGEMENT/admin_login.php">ADMIN</a></li>
+        <li><a href="./contact.php">Contact us</a></li>
+      </ul>
+    </header>
+  </nav>
   <div>
     <div class="container">
       <hr>
@@ -41,11 +49,12 @@
         <li>Electric Neutral Hostel</li>
       </ul>
       <hr>
-       
+
     </div>
   </div>
   <footer>
     <p>&copy; 2023 Hostel. All rights reserved.</p>
   </footer>
 </body>
+
 </html>

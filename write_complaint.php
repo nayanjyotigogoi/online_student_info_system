@@ -35,6 +35,15 @@
 					</div>
 				</div>
 				<br>
+
+				<div class="form-group row">
+					<label for="inputname" class="col-sm-1 col-form-label">Enrollment Id</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="inputname" placeholder="Your Enrollment Id" name="Enrollment_id" required>
+					</div>
+				</div>
+				<br>
+
 				<div class="form-group row">
 					<label for="inputRoom-no" class="col-sm-1 col-form-label">Room-no</label>
 					<div class="col-sm-10">
@@ -55,7 +64,7 @@
                      
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Write Down Your Query Here" name="message"></textarea required>
                 </div>
-
+				
 				<br>
 				<button type="submit" class="btn btn-secondary" name="complaint">Write Complaint</button>
 			</form>

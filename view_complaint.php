@@ -1,87 +1,94 @@
 <?php
-    session_start();
-        if(!isset($_SESSION['username'])){
-            header("location:login.php");
-        }
-        elseif($_SESSION['usertype']=='student'){
-            header("location:login.php");
-        }
+session_start();
+if (!isset($_SESSION['username'])) {
+    header("location:login.php");
+} elseif ($_SESSION['usertype'] == 'student') {
+    header("location:login.php");
+}
 
-        $host="localhost";
-        $user="root";
-        $password="";
-        $db="miniproject";
+$host = "localhost";
+$user = "root";
+$password = "";
+$db = "miniproject";
 
-        $data=mysqli_connect($host,$user,$password,$db);
+$data = mysqli_connect($host, $user, $password, $db);
 
-        $sql="SELECT *FROM user_complaint";
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $complaintId = $_POST['complaint_id'];
+    $status = $_POST['status'];
 
-        $result=mysqli_query($data,$sql); //fetching data from the t
+    // Update the status in the database
+    $updateSql = "UPDATE user_complaint SET status = '$status' WHERE id = '$complaintId'";
+    mysqli_query($data, $updateSql);
+}
 
-
-
+$sql = "SELECT * FROM user_complaint";
+$result = mysqli_query($data, $sql);
 ?>
+
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
-    <title>View Complaint</title>
-
+    <title>Update Complaint Status</title>
     <link rel="stylesheet" type="text/css" href="admin.css">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+     
 </head>
 
 <body>
-
     <?php
-    include 'view_complaint_sidebar.php'
+    include 'view_complaint_sidebar.php';
     ?>
 
     <div class="content">
-
-        <h1>complaints</h1>
-        <p>View complaints posted by students, facilitating prompt resolution and improved student satisfaction.</p>
+        <h1>Complaints </h1>
+        <p>Update the status of complaints posted by students.</p>
         <center>
             <table class="table">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Name</th>
-                        <th scope="col">Room-no</th>
-                        <th scope="col">Phone number</th>
+                        <th scope="col">Enrollment Id</th>
+                        <th scope="col">Room No</th>
+                        <th scope="col">Phone Number</th>
                         <th scope="col">Message</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Update Status</th>
                     </tr>
                 </thead>
-                 
+
                 <tbody>
-                    <tr>
                     <?php
-                    while($info=$result->fetch_assoc())
-                    {    
+                    while ($info = $result->fetch_assoc()) {
                     ?>
-                        <th scope="row"><?php  echo"{$info['id']}" ;?></th>
-                        <td><?php  echo"{$info['name']}" ;?> </td>
-                        <td><?php  echo"{$info['roomNo']}" ;?></td>
-                        <td><?php  echo"{$info['phone']}" ;?></td>
-                        <td><?php  echo"{$info['message']}" ;?></td>
-                        <td></td>
-                        
-                         
-                    </tr>
-                        
-                     
+                        <tr>
+                            <th scope="row"><?php echo $info['id']; ?></th>
+                            <td><?php echo $info['name']; ?></td>
+                            <td><?php echo $info['enrollment_id']; ?></td>
+                            <td><?php echo $info['roomNo']; ?></td>
+                            <td><?php echo $info['phone']; ?></td>
+                            <td><?php echo $info['message']; ?></td>
+                            <td><?php echo $info['status']; ?></td>
+                            <td>
+                                <form method="post">
+                                    <input type="hidden" name="complaint_id" value="<?php echo $info['id']; ?>">
+                                    <select name="status">
+                                        <option value="---">---</option>
+                                        <option value="Not Solved">Not Solved</option>
+                                        <option value="Solved">solved</option>
+                                        <option value="Forwarded to Warden">Forwarded to Warden</option>
+                                    </select>
+                                    <button type="submit">Update</button>
+                                </form>
+                            </td>
+                        </tr>
                     <?php
                     }
                     ?>
-                    
                 </tbody>
-
-                 
             </table>
         </center>
     </div>

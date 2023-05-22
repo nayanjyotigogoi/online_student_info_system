@@ -45,6 +45,10 @@
  				<a href="write_complaint.php">Write Complaint</a>
  			</li>
 
+			 <li>
+ 				<a href="check_status.php">View Complaint status</a>
+ 			</li>
+
  			<li>
  				<a href="file_upload.php">Upload fess receipt</a>
  			</li>
