@@ -7,6 +7,22 @@
   <title>Hostel</title>
   <link rel="stylesheet" href="style.css">
 
+  <style>
+    /* New CSS styles */
+    nav ul {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    nav ul li {
+      margin-left: 10px;
+    }
+
+    nav ul li a {
+      color: aliceblue; /* Change the color to your desired value */
+    }
+  </style>
+
 </head>
 
 <body>
@@ -15,9 +31,6 @@
       <h1>Welcome to Hostel</h1>
 
     </header>
-
-
-
   </nav>
 
   <nav>
