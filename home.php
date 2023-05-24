@@ -19,7 +19,7 @@
     }
 
     nav ul li a {
-      color: aliceblue; /* Change the color to your desired value */
+      color: aliceblue; 
     }
   </style>
 
@@ -36,10 +36,10 @@
   <nav>
     <header id="header">
       <ul>
-        <li><a href="/STUDENT_MANAGEMENT/login.php">Login</a></li>
-        <li><a href="/STUDENT_MANAGEMENT/signup.php">Signup</a></li>
-        <li><a href="/STUDENT_MANAGEMENT/admin_login.php">ADMIN</a></li>
-        <li><a href="./contact.php">Contact us</a></li>
+        <li><a href="/STUDENT_MANAGEMENT/login/login.php">Login</a></li>
+        <li><a href="/STUDENT_MANAGEMENT/signup/signup.php">Signup</a></li>
+        <li><a href="/STUDENT_MANAGEMENT/Admin Dashboard/login/admin_login.php">ADMIN</a></li>
+        <li><a href="./contact us/contact.php">Contact us</a></li>
       </ul>
     </header>
   </nav>
