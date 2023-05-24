@@ -25,7 +25,7 @@ if (isset($_POST['submit'])) {
             session_destroy();
             $successMessage = "Password reset successful. Please <a href='login.php'>login</a> with your new password.";
         } else {
-            $errorMessage = "Failed to reset password. Please try again.";
+            $errorMessage = "Failed to reset password. Please try again. ";
         }
     } else {
         $errorMessage = "Passwords do not match. Please try again.";

@@ -20,7 +20,7 @@ $result = mysqli_query($data, $sql);
 if ($result) {
     $userInfo = mysqli_fetch_assoc($result);
 } else {
-    $profileError = "Failed to fetch user profile.";
+    $profileError = "Failed to fetch user profile. ";
 }
 ?>
 

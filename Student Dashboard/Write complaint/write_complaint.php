@@ -39,7 +39,7 @@
 				<div class="form-group row">
 					<label for="inputname" class="col-sm-1 col-form-label">Enrollment Id</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="inputname" placeholder="Your Enrollment Id" name="Enrollment_id" required>
+						<input type="text" class="form-control" id="inputname" placeholder="Your Enrollment Id" name="enrollment_id" required>
 					</div>
 				</div>
 				<br>

@@ -38,13 +38,13 @@ if (isset($_POST['add'])) {
 			$result = mysqli_query($data, $sql);
 
 			if ($result) {
-				echo "<script>alert('user registered succesfully');</script>";
-				header("location:login.php");
+				echo "<script>alert('user registered succesfully');  window.location.href = '../adminhome.php'</script>";
+				// header("location:login.php");
 			} else {
-				echo "<script>alert('couldn't register user');</script>";
+				echo "<script>alert('couldn't register user');  window.location.href = '../adminhome.php'</script>";
 			}
 		} else {
-			echo "<script>alert('please fill all the input fields);</script>";
+			echo "<script>alert('please fill all the input fields); window.location.href = '../adminhome.php'</script>";
 		}
 	}
 }

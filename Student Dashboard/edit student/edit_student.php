@@ -38,11 +38,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = mysqli_query($data, $sql);
 
     if ($result) {
-        echo "<script>alert(Profile updated successfully);</script>";
-        header("Location: ../studenthome.php");
+        // echo "<script>alert(Profile updated successfully);</script>";
+        echo "<script> alert('Profile updated successfully'); window.location.href = '../studenthome.php';</script>";
+        // header("Location: ../studenthome.php");
         exit();
     } else {
-        echo "</script>alert(Failed to update profile.);</script>";
+        echo "</script>alert('Failed to update profile.'); window.location.href = '../studenthome.php'</script>";
     }
 }
 

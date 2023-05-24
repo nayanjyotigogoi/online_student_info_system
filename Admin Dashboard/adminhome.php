@@ -31,11 +31,11 @@ if (!isset($_SESSION['username'])) {
 
 	<header class="header">
 
-		<a href="">Admin Dashboard</a>
+		<a href="./adminhome.php">Admin Dashboard</a>
 
 		<div class="logout">
 
-			<a href="admin_logout.php" class="btn btn-primary">Logout</a>
+			<a href="./login/admin_logout.php" class="btn btn-primary">Logout</a>
 
 		</div>
 
