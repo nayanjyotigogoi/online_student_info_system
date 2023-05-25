@@ -5,10 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hostel</title>
-  <link rel="stylesheet" href="style.css">
 
   <style>
     /* New CSS styles */
+    /* body{
+      overflow-x: hidden;
+    } */
     nav ul {
       display: flex;
       justify-content: flex-end;
@@ -21,7 +23,15 @@
     nav ul li a {
       color: aliceblue; 
     }
+
+    /* .footer-class{
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    } */
   </style>
+
+<link rel="stylesheet" href="./style.css">
 
 </head>
 
@@ -65,7 +75,7 @@
 
     </div>
   </div>
-  <footer>
+  <footer class="footer-class">
     <p>&copy; 2023 Hostel. All rights reserved.</p>
   </footer>
 </body>

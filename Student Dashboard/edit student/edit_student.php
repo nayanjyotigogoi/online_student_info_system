@@ -114,7 +114,7 @@ if ($result) {
 
                                                     <div class="col-md-12">
                                                         <label class="labels">Address</label>
-                                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter your Address" name="address" value="<?php echo $userInfo['address']; ?>" required>
+                                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter your Address" name="address" value="<?php echo $userInfo['address'];?>" required>
                                                     </textarea>
                                                         <div class="col-md-12">
                                                             <label class="labels">Pin-code</label>
