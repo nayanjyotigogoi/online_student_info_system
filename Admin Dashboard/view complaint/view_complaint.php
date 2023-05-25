@@ -49,13 +49,13 @@ $result = mysqli_query($data, $sql);
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
+                        <th scope="col">Id</th>
                         <th scope="col">Name</th>
                         <th scope="col">Enrollment Id</th>
                         <th scope="col">Room No</th>
                         <th scope="col">Phone Number</th>
-                        <th scope="col">Message</th>
-                        <th scope="col">Status</th>
+                        <th class="bg-info" scope="col">Message</th>
+                        <th class="bg-danger" scope="col">Status</th>
                         <th scope="col">Update Status</th>
                     </tr>
                 </thead>
@@ -70,8 +70,8 @@ $result = mysqli_query($data, $sql);
                             <td><?php echo $info['enrollment_id']; ?></td>
                             <td><?php echo $info['roomNo']; ?></td>
                             <td><?php echo $info['phone']; ?></td>
-                            <td><?php echo $info['message']; ?></td>
-                            <td><?php echo $info['status']; ?></td>
+                            <td class="bg-info"><?php echo $info['message']; ?></td>
+                            <td class="bg-danger"><?php echo $info['status']; ?></td>
                             <td>
                                 <form method="post">
                                     <input type="hidden" name="complaint_id" value="<?php echo $info['id']; ?>">

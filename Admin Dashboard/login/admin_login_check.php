@@ -54,7 +54,7 @@ if($data===false)
 
 			$_SESSION['loginMessage']=$message;
 
-			header("location:../admin_login.php");
+			header("location:admin_login.php");
 		}
 	}
 

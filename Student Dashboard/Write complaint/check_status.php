@@ -62,11 +62,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </tr>
                 <tr>
                     <th>Message</th>
-                    <td><?php echo $complaint['message']; ?></td>
+                    <td  ><?php echo $complaint['message']; ?></td>
                 </tr>
                 <tr>
-                    <th>Status</th>
-                    <td><?php echo $complaint['status']; ?></td>
+                    <th class="bg-danger">Status</th>
+                    <td class="bg-danger"><?php echo $complaint['status']; ?></td>
                 </tr>
             </table>
         <?php endif; ?>
