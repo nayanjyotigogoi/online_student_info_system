@@ -30,7 +30,7 @@ if (isset($_GET['id'])) {
 
 		if ($result) {
 			$_SESSION['message'] = "<div class='alert alert-success'>Room information updated successfully.</div>";
-			header("adminhome.php"); // Redirect to the page displaying all rooms
+			header("location:../adminhome.php"); // Redirect to the page displaying all rooms
 			exit();
 		} else {
 			$_SESSION['message'] = "<div class='alert alert-danger'>Failed to update room information.</div>";

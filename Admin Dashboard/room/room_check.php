@@ -38,7 +38,7 @@ if (isset($_POST['update'])) {
 
 			if ($result) {
 				$_SESSION['message'] = "entry completed";
-				header("location:add_room.php");
+				header("location:./adminhome.php");
 			} else {
 				$_SESSION['message'] = "couldn't register user";
 			}

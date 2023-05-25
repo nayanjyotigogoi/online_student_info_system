@@ -1,6 +1,5 @@
 <!-- this page is view the student data in admin panel -->
 <?php
-
 error_reporting(0);
 session_start();
 
@@ -17,10 +16,16 @@ $db = "miniproject";
 
 $data = mysqli_connect($host, $user, $password, $db);
 
-$sql = "SELECT *FROM room";
+if (isset($_POST['search'])) {
+    $room_no = $_POST['room_no'];
 
-$result = mysqli_query($data, $sql);
-
+    // Fetch data from the database based on the room number
+    $sql = "SELECT * FROM room WHERE room_no = '$room_no'";
+    $result = mysqli_query($data, $sql);
+} else {
+    $sql = "SELECT * FROM room";
+    $result = mysqli_query($data, $sql);
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -38,17 +43,22 @@ $result = mysqli_query($data, $sql);
 </head>
 
 <body>
-
     <?php
     include "room_sidebar.php"
     ?>
-
     <div class="content">
 
         <h1>Student data</h1>
         <p>Manage room details, including occupancy, availability, and amenities.</p>
 
-        
+        <!-- Search Form -->
+        <form method="POST" action="">
+            <div class="mb-3">
+                <label for="room_no" class="form-label">Enter Room Number:</label>
+                <input type="text" class="form-control" id="room_no" name="room_no" placeholder="Room Number" required>
+            </div>
+            <button type="submit" class="btn btn-primary" name="search">Search</button>
+        </form>
 
         <table class="table">
             <thead>
@@ -58,15 +68,15 @@ $result = mysqli_query($data, $sql);
                     <th scope="col">Occupant-A</th>
                     <th scope="col">Occupant-B</th>
                     <th scope="col">Status</th>
-                    <th scope="col">Actions</th>  
+                    <th scope="col">Actions</th>
                 </tr>
             </thead>
 
             <tbody>
-                <tr>
-                    <?php
-                    while ($info = mysqli_fetch_assoc($result)) {
-                    ?>
+                <?php
+                while ($info = mysqli_fetch_assoc($result)) {
+                ?>
+                    <tr>
                         <th scope="row"><?php echo "{$info['id']}"; ?></th>
                         <th><?php echo "{$info['room_no']}"; ?></th>
                         <td><?php echo "{$info['occupant_1']}"; ?></td>
@@ -75,17 +85,14 @@ $result = mysqli_query($data, $sql);
                         <td>
                             <a href="update_room.php?id=<?php echo $info['id']; ?>">Update</a>
                         </td>
-                </tr>
-            <?php
-
-                    }
-            ?>
+                    </tr>
+                <?php
+                }
+                ?>
             </tbody>
         </table>
 
     </div>
-
-
 
 </body>
 

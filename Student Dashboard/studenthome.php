@@ -71,7 +71,9 @@
  		<h1>
 
  			<?php
+				error_reporting(0);
 				session_start();
+
 
 				echo "Welcome " . $_SESSION['enrollment_id'];
 				?>

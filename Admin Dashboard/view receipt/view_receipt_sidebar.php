@@ -32,7 +32,7 @@
     <ul>
 
         <li>
-            <a href="file_upload.php">View receipt</a>
+            <a href="#">View receipt</a>
         </li>
 
     </ul>
