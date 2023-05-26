@@ -45,7 +45,9 @@ if (!isset($_SESSION['username'])) {
 	<aside class="leftBox">
 
 		<ul>
-
+			<li>
+				<a href="./search student/search_student.php">Search student</a>
+			</li>
 			<li>
 				<a href="./admission/admission.php">Admission</a>
 			</li>

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Admission</title>
 
-    <link rel="stylesheet" type="text/css" href="admin.css">
+    <link rel="stylesheet" type="text/css" href="../admin.css">
 
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
@@ -27,7 +27,7 @@
 
     <header class="header">
 
-        <a href="adminhome.php">Admin Dashboard</a>
+        <a href="../adminhome.php">Admin Dashboard</a>
         <div class="logout">
 
             <a href="./login/admin_logout.php" class="btn btn-primary">Logout</a>
@@ -38,16 +38,9 @@
 
     <ul>
 
-        <!-- <li>
-            <a href="admission.php">Admission</a>
-        </li>
-
         <li>
-            <a href="add_student.php">Add Student</a>
-        </li> -->
-
-         
-
+            <a href="#">Search</a>
+        </li>
 
     </ul>
 </body>
