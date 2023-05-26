@@ -14,13 +14,16 @@ if (!isset($_SESSION['enrollment_id'])) {
 }
 
 $enrollmentId = $_SESSION['enrollment_id'];
-$sql = "SELECT * FROM registration WHERE enrollment_id = '$enrollmentId'";
+$sql = "SELECT reg.*, room.room_no
+        FROM registration AS reg
+        LEFT JOIN room ON (reg.enrollment_id = room.enrollment_id_A OR reg.enrollment_id = room.enrollment_id_B)
+        WHERE reg.enrollment_id = '$enrollmentId'";
 $result = mysqli_query($data, $sql);
 
 if ($result) {
     $userInfo = mysqli_fetch_assoc($result);
 } else {
-    $profileError = "Failed to fetch user profile. ";
+    $profileError = "Failed to fetch user profile.";
 }
 ?>
 
@@ -41,7 +44,7 @@ if ($result) {
         <h1>User Profile</h1>
         <br>
 
- 		<p>You can access and update your personal information, ensuring that your details are accurate and up to date.</p>
+        <p>You can access and update your personal information, ensuring that your details are accurate and up to date.</p>
 
         <?php if (isset($profileError)) : ?>
             <p><?php echo $profileError; ?></p>
@@ -66,6 +69,7 @@ if ($result) {
                         <th scope="col">Batch</th>
                         <th scope="col">Current Year</th>
                         <th scope="col">Current Semester</th>
+                        <th scope="col">Room Number</th>
                         <th scope="col">Action</th> <!-- Added action column -->
                     </tr>
                 </thead>
@@ -88,6 +92,7 @@ if ($result) {
                         <td><?php echo $userInfo['batch']; ?></td>
                         <td><?php echo $userInfo['current_year']; ?></td>
                         <td><?php echo $userInfo['current_semester']; ?></td>
+                        <td><?php echo $userInfo['room_no']; ?></td> <!-- Display room number -->
                         <td><a href="../edit student/edit_student.php">Edit</a></td> <!-- Edit action link -->
                     </tr>
                 </tbody>

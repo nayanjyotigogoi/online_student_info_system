@@ -45,12 +45,25 @@
 				</div>
 				<br>
 				<div class="form-group row">
+					<label for="inputPassword" class="col-sm-1 col-form-label">Enrollment Id</label>
+					<div class="col-sm-10">
+						<input type="text"   class="form-control" id="inputname" placeholder="Enrollment Id Of Occupant-A" name="enrollment_id_A" required>
+					</div>
+				</div>
+				<br>
+				<div class="form-group row">
 					<label for="inputPhone" class="col-sm-1 col-form-label">Occupant-B</label>
 					<div class="col-sm-10">
 						<input type="text"  class="form-control" id="inputname" placeholder="Occupant-B name" name="occupant_2"  >
 					</div>
 				</div>
 				<br>
+				<div class="form-group row">
+					<label for="inputPassword" class="col-sm-1 col-form-label">Enrollment Id</label>
+					<div class="col-sm-10">
+						<input type="text"   class="form-control" id="inputname" placeholder="Enrollment Id Of Occupant-B" name="enrollment_id_B" required>
+					</div>
+				</div>
 				<div class="form-group row">
 					<label for="Email" class="col-sm-1 col-form-label">Status</label>
 					<div class="col-sm-10">

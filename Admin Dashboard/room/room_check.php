@@ -19,7 +19,9 @@ $data = mysqli_connect($host, $user, $password, $db); //this says that we're con
 if (isset($_POST['update'])) {
 	$roomno = $_POST['room_no'];
 	$occupant_1 = $_POST['occupant_1'];
+	$enrollment_id_A = $_POST['enrollment_id_A '];
 	$occupant_2 = $_POST['occupant_2'];
+	$enrollment_id_B = $_POST['enrollment_id_B '];
 	$status = $_POST['status'];
 
 	$check = "SELECT *FROM room WHERE room_no = '" . $roomno . "'";
@@ -31,7 +33,7 @@ if (isset($_POST['update'])) {
 		echo "<script> alert('Room  already occupied. try another room');</script>";
 	} else {
 
-		$sql = "INSERT INTO room (room_no,occupant_1,occupant_2,status) VALUES ('" . $roomno . "','" . $occupant_1 . "','" . $occupant_2 . "','" . $status . "')";
+		$sql = "INSERT INTO room (room_no,occupant_1,enrollment_id_A,occupant_2,enrollment_id_B,status) VALUES ('" . $roomno . "','" . $occupant_1 . "','".$enrollment_id_A."','" . $occupant_2 . "','".$enrollment_id_B."','" . $status . "')";
 
 		if ($roomno != "" && $occupant_1 != "" && $occupant_2 != "" & $status != "") {
 			$result = mysqli_query($data, $sql);
