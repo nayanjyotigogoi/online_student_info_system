@@ -58,11 +58,24 @@
 					</div>
 				</div>
 				<br>
-				 
+				
+				<div class="form-group row">
+					<label for="queryType" class="col-sm-1 col-form-label">Query Type</label>
+					<div class="col-sm-10">
+						<select class="form-select" id="queryType" name="queryType" required>
+							<option value="" selected disabled>Select Query Type</option>
+							<option value="Noise Disturbances">Noise Disturbances</option>
+							<option value="Maintenance Issues">Maintenance Issues</option>
+							<option value="Conflicts with Roommates">Conflicts with Roommates</option>
+							<option value="Other">Other</option>
+						</select>
+					</div>
+				</div>
+				<br>
+				
 				<div class="form-group">
                     <label for="exampleFormControlTextarea1" class="col-sm-1 col-form-label">Your Query</label>
-                     
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Write Down Your Query Here" name="message"></textarea required>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Write Down Your Query Here, explain in brief." name="message" required></textarea>
                 </div>
 				
 				<br>
@@ -72,8 +85,6 @@
 		</div>
 
 	</div>
-
-
 
 </body>
 
