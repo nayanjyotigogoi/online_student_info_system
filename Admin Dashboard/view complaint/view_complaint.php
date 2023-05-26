@@ -13,15 +13,6 @@ $db = "miniproject";
 
 $data = mysqli_connect($host, $user, $password, $db);
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $complaintId = $_POST['enrollment_id'];
-    $status = $_POST['status'];
-
-    // Update the status in the database
-    $updateSql = "UPDATE user_complaint SET status = '$status' WHERE enrollment_id = '$complaintId'";
-    mysqli_query($data, $updateSql);
-}
-
 if (isset($_POST['search'])) {
     $enrollmentId = $_POST['enrollment_id'];
 
@@ -31,6 +22,21 @@ if (isset($_POST['search'])) {
 } else {
     $sql = "SELECT * FROM user_complaint";
     $result = mysqli_query($data, $sql);
+}
+
+// Update complaint status
+if (isset($_POST['update_status'])) {
+    $complaintId = $_POST['complaint_id'];
+    $status = $_POST['status'];
+
+    $updateSql = "UPDATE user_complaint SET status = '$status' WHERE id = '$complaintId'";
+    $updateResult = mysqli_query($data, $updateSql);
+
+    if ($updateResult) {
+        echo "<script>alert('Status updated successfully.'); window.location.href = './adminhome.php';</script>";
+    } else {
+        echo "<script>alert('Failed to update status. Please try again.');</script>";
+    }
 }
 ?>
 
@@ -72,7 +78,7 @@ if (isset($_POST['search'])) {
                     <th scope="col">Phone Number</th>
                     <th class="bg-info" scope="col">Message</th>
                     <th class="bg-danger" scope="col">Status</th>
-                    <th scope="col">Update Status</th>
+                    <th class="bg-warning" scope="col">Update Status</th>
                 </tr>
             </thead>
 
@@ -89,15 +95,16 @@ if (isset($_POST['search'])) {
                         <td class="bg-info"><?php echo $info['message']; ?></td>
                         <td class="bg-danger"><?php echo $info['status']; ?></td>
                         <td>
-                            <form method="post">
-                                <input type="hidden" name="enrollment_id" value="<?php echo $info['id']; ?>">
-                                <select name="status">
-                                    <option value="---">---</option>
-                                    <option value="Not Solved">Not Solved</option>
-                                    <option value="Solved">Solved</option>
-                                    <option value="Forwarded to Warden">Forwarded to Warden</option>
+                            <form method="POST" action="">
+                                <input type="hidden" name="complaint_id" value="<?php echo $info['id']; ?>">
+                                <select name="status" class="form-select" required>
+                                    <option value="" selected disabled>Select Status</option>
+                                    <option value="Pending">Pending</option>
+                                    <option value="In Progress">In Progress</option>
+                                    <option value="Resolved">Resolved</option>
+                                    <option value="Forwarded to warden ">Forwarded to warden</option>
                                 </select>
-                                <button type="submit">Update</button>
+                                <button type="submit" class="btn btn-primary" name="update_status">Update</button>
                             </form>
                         </td>
                     </tr>
