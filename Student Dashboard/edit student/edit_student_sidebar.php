@@ -32,7 +32,7 @@
     <ul>
 
         <li>
-            <a href="edit_student.php">Enter Your Student</a>
+            <a href="edit_student.php">Enter Your Details</a>
         </li>
 
     </ul>
