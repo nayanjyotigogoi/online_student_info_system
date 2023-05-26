@@ -33,7 +33,7 @@ if (isset($_POST['update_status'])) {
     $updateResult = mysqli_query($data, $updateSql);
 
     if ($updateResult) {
-        echo "<script>alert('Status updated successfully.'); window.location.href = './adminhome.php';</script>";
+        echo "<script>alert('Status updated successfully.'); window.location.href = '../adminhome.php';</script>";
     } else {
         echo "<script>alert('Failed to update status. Please try again.');</script>";
     }
