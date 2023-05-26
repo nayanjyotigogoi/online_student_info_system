@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-     
+
     <style>
-        /* Additional CSS styles */
         body {
             font-family: Arial, sans-serif;
             /* background-color: #333; */
@@ -18,8 +17,7 @@
 
         /* Header styles */
         #header {
-
-            color: #333;
+            background-color: #333;
             padding: 20px;
             text-align: center;
         }
@@ -27,9 +25,9 @@
         h1 {
             margin: 0;
             font-size: 28px;
-            color: #333;
+            color: #fff;
         }
-        
+
 
         nav ul {
             list-style-type: none;
@@ -43,18 +41,16 @@
         }
 
         nav ul li a {
-            color: #333;
+            color: #fff;
             text-decoration: none;
         }
 
         /* Main content styles */
         .container {
-            max-width: 800px;
+            background-color: #c5ded7;
+            max-width: 80%;
             margin: 20px auto;
             padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
         }
 
         h2 {
@@ -86,7 +82,7 @@
         input[type="email"],
         textarea {
             width: 100%;
-            padding: 10px;
+            /* padding: 10px; */
             border: 1px solid #ccc;
             border-radius: 5px;
         }
@@ -108,9 +104,10 @@
         footer {
             background-color: #333;
             color: #fff;
-            padding: 10px;
+            padding: 20px;
             text-align: center;
-            font-size: 14px;
+            margin-top: 40px;
+            ;
         }
 
         footer p {
@@ -118,17 +115,17 @@
         }
     </style>
 
-    
+
 
 </head>
 
 <body>
     <nav>
         <header id="header">
-            <h1>Welcome to Our Hostel</h1>
+            <h1>Patkai Men's Hostel</h1>
             <nav>
                 <ul>
-                    <li><a href="./home.php">HOME</a></li>
+                    <li><a href="../home.php">HOME</a></li>
                 </ul>
             </nav>
         </header>

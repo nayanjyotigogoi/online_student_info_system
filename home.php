@@ -108,7 +108,7 @@
         <a href="/STUDENT_MANAGEMENT/login/login.php">Login</a>
         <a href="/STUDENT_MANAGEMENT/signup/signup.php">Signup</a>
         <a href="/STUDENT_MANAGEMENT/Admin Dashboard/login/admin_login.php">Admin</a>
-        <a href="./contact-us/contact.php">Contact Us</a>
+        <a href="/STUDENT_MANAGEMENT/contact us/contact.php">Contact Us</a>
       </nav>
     </div>
     <img class="logo" src="pmh.png" alt="Hostel Management Logo" width="250">
