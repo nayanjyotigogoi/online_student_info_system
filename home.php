@@ -19,19 +19,19 @@
     }
 
     .logo {
-      margin-bottom: 10px;
+      /* margin-bottom: 10px; */
       display: block;
-      padding: 10vh 50px 0px 65vh;
+      /* padding: 10vh 50px 0px 65vh; */
     }
 
-    .container1{
+    .container1 {
       background-color: #E0EBE8;
       max-width: 80%;
       margin: 20px auto;
       padding: 20px;
     }
 
-    .about h3{
+    .about h3 {
       color: #45b29a;
     }
 
@@ -73,7 +73,7 @@
       margin-top: 40px;
     }
 
-    .credit{
+    .credit {
       margin-right: 20px;
       color: #45b29a;
       text-decoration: none;
@@ -111,7 +111,10 @@
         <a href="/STUDENT_MANAGEMENT/contact us/contact.php">Contact Us</a>
       </nav>
     </div>
-    <img class="logo" src="pmh.png" alt="Hostel Management Logo" width="250">
+    <div style="display: flex; justify-content: center;">
+      <img class="logo" src="pmh.png" alt="Hostel Management Logo" width="250" height="250">
+    </div>
+
     <div class="about">
       <div>
         <h3>About Us</h3>
@@ -145,7 +148,9 @@
 
   <div class="contact-us">
     <hr>
-    <a href="./contact us/contact.php"><h3>CONTACT US</h3> </a> 
+    <a href="./contact us/contact.php">
+      <h3>CONTACT US</h3>
+    </a>
     <p>For more information or inquiries, feel free to reach out to us.</p>
     <p>Email: patkaimenshostel2011@gmail.com </p>
     <p>Address: Tezpur, napam.</p>
@@ -153,7 +158,7 @@
 
   <div class="footer">
     <p>PATKAI MEN'S HOSTEL.</p>
-     
+
     <a class="credit" href="https://github.com/nayanjyotigogoi">&copy; Nayan</a>
   </div>
 </body>
