@@ -17,13 +17,13 @@ $data = mysqli_connect($host, $user, $password, $db); //this says that we're con
 
 //we will only come to this if condition only if someone click the add student button
 if (isset($_POST['add'])) {
-	$username = $_POST['username'];
+	$enrollment_id = $_POST['enrollment_id'];
 	$password = $_POST['password'];
 	$email = $_POST['email'];
 	$phone_number = $_POST['phone'];
 	$usertype = "student"; //whenever the admin try to add student the user type will always to student
 
-	$check = "SELECT *FROM user WHERE username = '" . $username . "'"; //check whether username is unique or not. variable should be in white color
+	$check = "SELECT *FROM registration WHERE enrollment_id = '" . $enrollment_id . "'"; //check whether username is unique or not. variable should be in white color
 	$check_user = mysqli_query($data, $check);
 
 	$row_count = mysqli_num_rows($check_user); //using this it means were counting whether multiple user exist
@@ -32,9 +32,9 @@ if (isset($_POST['add'])) {
 		echo "<script>alert('Username already exist. try again');</script)";
 	} else {
 
-		$sql = "INSERT INTO user (username,password,phone,email,usertype) VALUES ('" . $username . "','" . $password . "','" . $phone_number . "','" . $email . "','" . $usertype . "')";
+		$sql = "INSERT INTO registration (enrollment_id,password,phone,email,usertype) VALUES ('" . $enrollment_id . "','" . $password . "','" . $phone_number . "','" . $email . "','" . $usertype . "')";
 
-		if ($username != "" && $password != "" && $phone_number != "" && $usertype != "") {
+		if ($enrollment_id != "" && $password != "" && $phone_number != "" && $usertype != "") {
 			$result = mysqli_query($data, $sql);
 
 			if ($result) {

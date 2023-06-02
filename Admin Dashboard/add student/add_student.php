@@ -26,9 +26,9 @@
 		<div>
 			<form action="add_student_check.php" method="post">
 				<div class="form-group row">
-					<label for="inputUsername" class="col-sm-1 col-form-label">Username</label>
+					<label for="inputUsername" class="col-sm-1 col-form-label">Enrollment id</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="inputUsername" placeholder="username" name="username" required>
+						<input type="text" class="form-control" id="inputUsername" placeholder="Enrollment id" name="enrollment_id" required>
 					</div>
 				</div>
 				<br>
