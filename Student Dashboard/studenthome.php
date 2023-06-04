@@ -94,7 +94,7 @@
 					</li>
 
 					<li>
-						<a href="./edit student/edit_student.php">Enter your details</a>
+						<a href="./Enter Details/enter_details.php">Enter your details</a>
 					</li>
 
 				</div>

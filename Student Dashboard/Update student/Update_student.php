@@ -15,16 +15,14 @@ if (!isset($_SESSION['enrollment_id'])) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $enrollmentId = $_SESSION['enrollment_id'];
-
-    // Retrieve updated field values from the form
     $phone = $_POST['phone'];
     $address = $_POST['address'];
     $email = $_POST['email'];
     $currentYear = $_POST['current_year'];
     $currentSemester = $_POST['current_semester'];
 
-    // Update the user profile in the database
-    $sql = "UPDATE registration SET phone='$phone', address='$address', email='$email', current_year='$currentYear', current_semester='$currentSemester' WHERE enrollment_id='$enrollmentId'";
+     
+    $sql = "INSERT registration SET phone='$phone', address='$address', email='$email', current_year='$currentYear', current_semester='$currentSemester' WHERE enrollment_id='$enrollmentId'";
     $result = mysqli_query($data, $sql);
 
     if ($result) {
@@ -69,7 +67,7 @@ if ($result) {
     <div class="content">
 
         <h1>Edit details</h1>
-
+        <h1>PAGE NOT WORKING PROPERLY</h1>
         <br>
 
         <p>You can update your personal information here.</p>

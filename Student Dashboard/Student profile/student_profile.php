@@ -93,7 +93,7 @@ if ($result) {
                         <td><?php echo $userInfo['current_year']; ?></td>
                         <td><?php echo $userInfo['current_semester']; ?></td>
                         <td><?php echo $userInfo['room_no']; ?></td> <!-- Display room number -->
-                        <td><a href="../edit student/edit_student.php">Edit</a></td> <!-- Edit action link -->
+                        <td><a href="../Update student/Update_student.php">Edit</a></td> <!-- Edit action link -->
                     </tr>
                 </tbody>
             </table>
